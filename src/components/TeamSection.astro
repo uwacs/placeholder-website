@@ -1,0 +1,99 @@
+---
+const teamMembers = [
+  {
+    name: "Samin",
+    role: "President",
+    desc: "Computer Science major with a focus on AI and machine learning.",
+    fb: "#",
+    linkedin: "#",
+    github: "#",
+  },
+  {
+    name: "Paul Bahiga",
+    role: "Co-President",
+    desc: "Double major in Computer Science and Mathematics with an interest in cryptography.",
+    fb: "#",
+    linkedin: "#",
+    github: "#",
+  },
+  {
+    name: "Isabella",
+    role: "Events Coordinator",
+    desc: "Specializing in web development and UX/UI design with a passion for accessibility.",
+    fb: "#",
+    linkedin: "#",
+    github: "#",
+  },
+  {
+    name: "Danica",
+    role: "Social Media Manager",
+    desc: "Graphic design enthusiast with a knack for creating engaging content and community outreach.",
+    fb: "#",
+    linkedin: "#",
+    github: "#",
+  },
+  {
+    name: "Karanpreet",
+    role: "Vice President, Women in ACS",
+    desc: "Advocating for gender equity in tech and empowering women through community initiatives.",
+    fb: "#",
+    linkedin: "#",
+    github: "#",
+  },
+  {
+    name: "Vansh Vasudev",
+    role: "External Relations and Outreach",
+    desc: "Experienced in project management and community engagement, focusing on building partnerships.",
+    fb: "#",
+    linkedin: "#",
+    github: "#",
+  },
+  {
+    name: "Sirjan",
+    role: "Social Media Manager",
+    desc: "Graphic design enthusiast with a knack for creating engaging content and community outreach.",
+    fb: "#",
+    linkedin: "#",
+    github: "#",
+  },
+];
+---
+
+<section class="py-16 px-6 md:px-20 bg-gray-50">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl font-bold text-gray-800">Meet Our Team</h2>
+    <p class="text-gray-600 mt-2">
+      Our dedicated team of student leaders works tirelessly to create
+      opportunities and foster a vibrant computer science community.
+    </p>
+    <div class="w-20 h-1 mx-auto mt-4 bg-blue-600 rounded"></div>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {
+      teamMembers.map((member, i) => (
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <div class="bg-blue-600 h-20 flex justify-center items-center">
+            <div class="w-14 h-14 bg-gray-200 rounded-full border-4 border-white" />
+          </div>
+          <div class="p-5 text-center">
+            <h3 class="font-bold text-gray-800">{member.name}</h3>
+            <p class="text-blue-600 text-sm mb-3">{member.role}</p>
+            <p class="text-gray-600 text-sm">{member.desc}</p>
+            <div class="flex justify-center space-x-4 mt-4 text-gray-500 text-xl">
+              <a href={member.fb} aria-label="Facebook">
+                <i class="fab fa-facebook-f" />
+              </a>
+              <a href={member.linkedin} aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in" />
+              </a>
+              <a href={member.github} aria-label="GitHub">
+                <i class="fab fa-github" />
+              </a>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
